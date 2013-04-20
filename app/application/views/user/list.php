@@ -24,8 +24,8 @@
                             <li><a href="worklog">Worklog</a></li>
                             <li><a href="schedule">Schedule</a></li>
                             <li><a href="project">Project</a></li>
-                            <li><a href="users">Users</a></li>
-                            <li class="active"><a href="costumers">Costumers</a></li>
+                            <li class="active"><a href="users">Users</a></li>
+                            <li><a href="costumers">Costumers</a></li>
                             <li><a href="reports">Reports</a></li>
                         </ul>
                     </div>
@@ -34,36 +34,56 @@
         </div>
         <div class="container main-container">
             <div class="row">
-                <input type="text" class="search" placeholder="Search..."/>
+                <input type="text" class="search search-query" placeholder="Search..."/>
                 <div class="clear-r"></div>
                 <table class="table table-hover">
                     <thead>
                         <tr>
                             <td>ID</td>
-                            <td>Name</td>
-                            <td>Description</td>
+                            <td>UserName</td>
+                            <td>Password</td>
+                            <td>First Name</td>
+                            <td>Last Name</td>
+                            <td>Email</td>
+                            <td>Role</td>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td>42 Ideas</td>
-                            <td>It's us, silly</td>
+                            <td>luis</td>
+                            <td>supersecretpassword</td>
+                            <td>Luis</td>
+                            <td>Garcia</td>
+                            <td>luis@42ideas.mx</td>
+                            <td>user</td>
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td>Bajaware</td>
-                            <td>Empresa que hace software para bancos</td>
+                            <td>bambi</td>
+                            <td>supersecretpasswordtoo</td>
+                            <td>Juan</td>
+                            <td>Brambila</td>
+                            <td>juan@42ideas.mx</td>
+                            <td>user</td>
                         </tr>
                         <tr>
                             <td>3</td>
-                            <td>Bajapharma</td>
-                            <td>Empresa de venta de medicamento en l&iacute;nea</td>
+                            <td>adolph</td>
+                            <td>ihearthitler</td>
+                            <td>Gustavo</td>
+                            <td>Rubio</td>
+                            <td>gustavo@42ideas.mx</td>
+                            <td>admin</td>
                         </tr>
                         <tr>
                             <td>4</td>
-                            <td>Mistery Company</td>
-                            <td>No one knows</td>
+                            <td>mistery</td>
+                            <td>nooneknowsthis</td>
+                            <td>Mistery</td>
+                            <td>Man</td>
+                            <td>mistery@42ideas.mx</td>
+                            <td>user</td>
                         </tr>
                     </tbody>
                 </table>

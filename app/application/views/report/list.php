@@ -34,7 +34,7 @@
         </div>
         <div class="container main-container">
             <div class="row">
-                <input type="text" class="search" placeholder="Search..."/>
+                <input type="text" class="search search-query" placeholder="Search..."/>
                 <div class="clear-r"></div>
                 <table class="table table-hover">
                     <thead>
