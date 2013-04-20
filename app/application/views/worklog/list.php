@@ -7,6 +7,7 @@
         <meta name="description" content="">
         <link href="../css/bootstrap.css" rel="stylesheet">
         <link href="../css/bootstrap-responsive.css" rel="stylesheet">
+        <link href="../css/site.css" rel="stylesheet">
     </head>
     <body>
         <div class="navbar navbar-inverse navbar-fixed-top">
@@ -33,6 +34,8 @@
         </div>
         <div class="container main-container">
             <div class="row">
+                <input type="text" class="search" placeholder="Search..."/>
+                <div class="clear-r"></div>
                 <table class="table table-hover">
                     <thead>
                         <tr>
