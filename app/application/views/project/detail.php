@@ -31,7 +31,19 @@
             </div>
         </div>
         <div class="container">
-
+           <form>
+                <fieldset>
+                    <legend>Project</legend>
+                    <label>ID</label>
+                    <input id="project_id" type="text" />
+                    <label>Name</label>
+                    <input id="name" type="text" />
+                    <label>Description</label>
+                    <input id="description" type="text" />
+                    <label>Customer ID</label>
+                    <input id="customer_id" type="text" />
+                </fieldset>
+            </form>
         </div>
         <!--Javascript -->
         <script src="../js/jquery.js"></script>
