@@ -31,7 +31,25 @@
             </div>
         </div>
         <div class="container">
-
+            <form>
+                <fieldset>
+                    <legend>User</legend>
+                    <label>ID</label>
+                    <input id="user_id" type="text" />
+                    <label>Username</label>
+                    <input id="username" type="text" />
+                     <label>Password</label>
+                    <input id="password" type="text" />
+                     <label>First Name</label>
+                    <input id="first_name" type="text" />
+                     <label>Last Name</label>
+                    <input id="last_name" type="text" />
+                     <label>Email</label>
+                    <input id="email" type="text" />
+                    <label>Role</label>
+                    <<input id="role" type="text" />
+                </fieldset>
+            </form>
         </div>
         <!--Javascript -->
         <script src="../js/jquery.js"></script>
