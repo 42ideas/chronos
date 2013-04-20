@@ -22,10 +22,10 @@
                         <ul class="nav">
                             <li><a href="worklog">Worklog</a></li>
                             <li><a href="schedule">Schedule</a></li>
-                            <li><a href="project">Project</a></li>
+                            <li class="active"><a href="project">Project</a></li>
                             <li><a href="users">Users</a></li>
                             <li><a href="costumers">Costumers</a></li>
-                            <li class="active"><a href="reports">Reports</a></li>
+                            <li><a href="reports">Reports</a></li>
                         </ul>
                     </div>
                 </div>
@@ -39,63 +39,33 @@
                             <td>ID</td>
                             <td>Name</td>
                             <td>Description</td>
-                            <td>Report Type</td>
-                            <td>Costumer</td>
-                            <td>Project</td>
-                            <td>User</td>
-                            <td>Owner</td>
-                            <td>End Date</td>
-                            <td>Start Date</td>
+                            <td>Customer</td>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td>Report 1</td>
-                            <td>First Report</td>
-                            <td>Type 1</td>
-                            <td>Bajapharma</td>
-                            <td>Bajapharma</td>
-                            <td>Luis</td>
-                            <td>Gustavo</td>
-                            <td>1-Abril-2013</td>
-                            <td>30-Abril-2013</td>
+                            <td>Blog Post</td>
+                            <td>Escribir en el blog</td>
+                            <td>42 Ideas</td>
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td>Report 2</td>
-                            <td>Second Report</td>
-                            <td>Type 2</td>
-                            <td>Bajaware</td>
-                            <td>Bajaware</td>
-                            <td>Juan</td>
-                            <td>Gustavo</td>
-                            <td>1-Abril-2013</td>
-                            <td>30-Abril-2013</td>
+                            <td>Chronos</td>
+                            <td>Hacer este proyecto</td>
+                            <td>42 Ideas</td>
                         </tr>
                         <tr>
                             <td>3</td>
-                            <td>Report 3</td>
-                            <td>Third Report</td>
-                            <td>Type 3</td>
-                            <td>42 Ideas</td>
-                            <td>Blog post</td>
-                            <td>Gustavo</td>
-                            <td>Gustavo</td>
-                            <td>1-Abril-2013</td>
-                            <td>30-Abril-2013</td>
+                            <td>Bajapharma</td>
+                            <td>Hacer cositas de Bajapharma</td>
+                            <td>Bajapharma</td>
                         </tr>
                         <tr>
                             <td>4</td>
-                            <td>Report 4</td>
-                            <td>Fourth Report</td>
-                            <td>Type 4</td>
-                            <td>42 Ideas</td>
-                            <td>Chronos</td>
-                            <td>Luis</td>
-                            <td>Gustavo</td>
-                            <td>1-Abril-2013</td>
-                            <td>30-Abril-2013</td>
+                            <td>Bajaware</td>
+                            <td>Hacer cositas de Bajaware</td>
+                            <td>Bajaware</td>
                         </tr>
                     </tbody>
                 </table>

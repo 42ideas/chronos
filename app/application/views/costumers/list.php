@@ -22,6 +22,7 @@
                         <ul class="nav">
                             <li><a href="worklog">Worklog</a></li>
                             <li><a href="schedule">Schedule</a></li>
+                            <li><a href="project">Project</a></li>
                             <li><a href="users">Users</a></li>
                             <li class="active"><a href="costumers">Costumers</a></li>
                             <li><a href="reports">Reports</a></li>
@@ -30,8 +31,40 @@
                 </div>
             </div>
         </div>
-        <div class="container">
-
+        <div class="container main-container">
+            <div class="row">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <td>ID</td>
+                            <td>Name</td>
+                            <td>Description</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>42 Ideas</td>
+                            <td>It's us, silly</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Bajaware</td>
+                            <td>Empresa que hace software para bancos</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Bajapharma</td>
+                            <td>Empresa de venta de medicamento en l&iacute;nea</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Mistery Company</td>
+                            <td>No one knows</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
         <!--Javascript -->
         <script src="../js/jquery.js"></script>

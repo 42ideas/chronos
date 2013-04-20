@@ -22,7 +22,6 @@
                         <ul class="nav">
                             <li><a href="worklog">Worklog</a></li>
                             <li class="active"><a href="schedule">Schedule</a></li>
-                            <li><a href="project">Project</a></li>
                             <li><a href="users">Users</a></li>
                             <li><a href="costumers">Costumers</a></li>
                             <li><a href="reports">Reports</a></li>
@@ -31,45 +30,8 @@
                 </div>
             </div>
         </div>
-        <div class="container main-container">
-            <div class="row">
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <td>ID</td>
-                            <td>User</td>
-                            <td>Check In Time</td>
-                            <td>Check Out Time</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Luis</td>
-                            <td>8:00 A.M.</td>
-                            <td>1:00 P.M.</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Juan</td>
-                            <td>8:00 A.M.</td>
-                            <td>1:00 P.M.</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Gustavo</td>
-                            <td>8:00 A.M.</td>
-                            <td>1:00 P.M.</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Mistery Man</td>
-                            <td>8:00 A.M.</td>
-                            <td>1:00 P.M.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+        <div class="container">
+
         </div>
         <!--Javascript -->
         <script src="../js/jquery.js"></script>

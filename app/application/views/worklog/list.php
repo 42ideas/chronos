@@ -22,6 +22,7 @@
                         <ul class="nav">
                             <li class="active"><a href="worklog">Worklog</a></li>
                             <li><a href="schedule">Schedule</a></li>
+                            <li><a href="project">Project</a></li>
                             <li><a href="users">Users</a></li>
                             <li><a href="costumers">Costumers</a></li>
                             <li><a href="reports">Reports</a></li>
@@ -30,8 +31,65 @@
                 </div>
             </div>
         </div>
-        <div class="container">
-
+        <div class="container main-container">
+            <div class="row">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <td>ID</td>
+                            <td>Costumer</td>
+                            <td>Project</td>
+                            <td>User</td>
+                            <td>Description</td>
+                            <td>Start Time</td>
+                            <td>End Time</td>
+                            <td>Total Time</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Bajapharma</td>
+                            <td>Bajapharma</td>
+                            <td>Luis</td>
+                            <td>Modified something</td>
+                            <td>9:00 AM</td>
+                            <td>11:00 AM</td>
+                            <td>2:00</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>42 Ideas</td>
+                            <td>Chronos</td>
+                            <td>Luis</td>
+                            <td>Created this page</td>
+                            <td>6:30 PM</td>
+                            <td>7:30 PM</td>
+                            <td>1:00</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>42 Ideas</td>
+                            <td>Blog Post</td>
+                            <td>Juan</td>
+                            <td>Escribir sobre cositas</td>
+                            <td>6:30 PM</td>
+                            <td>7:30 PM</td>
+                            <td>1:00</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Bajapharma</td>
+                            <td>Goldman Sachs</td>
+                            <td>Gustavo</td>
+                            <td>Do Goldman Sachs stuff</td>
+                            <td>9:00 AM</td>
+                            <td>9:00 PM</td>
+                            <td>12:00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
         <!--Javascript -->
         <script src="../js/jquery.js"></script>

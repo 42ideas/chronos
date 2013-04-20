@@ -263,6 +263,9 @@ a:focus {
 .navbar-fixed-bottom .container {
   width: 940px;
 }
+.main-container {
+    margin-top: 50px;
+}
 .span12 {
   width: 940px;
 }

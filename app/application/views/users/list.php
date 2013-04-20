@@ -22,6 +22,7 @@
                         <ul class="nav">
                             <li><a href="worklog">Worklog</a></li>
                             <li><a href="schedule">Schedule</a></li>
+                            <li><a href="project">Project</a></li>
                             <li class="active"><a href="users">Users</a></li>
                             <li><a href="costumers">Costumers</a></li>
                             <li><a href="reports">Reports</a></li>
@@ -30,8 +31,60 @@
                 </div>
             </div>
         </div>
-        <div class="container">
-
+        <div class="container main-container">
+            <div class="row">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <td>ID</td>
+                            <td>UserName</td>
+                            <td>Password</td>
+                            <td>First Name</td>
+                            <td>Last Name</td>
+                            <td>Email</td>
+                            <td>Role</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>luis</td>
+                            <td>supersecretpassword</td>
+                            <td>Luis</td>
+                            <td>Garcia</td>
+                            <td>luis@42ideas.mx</td>
+                            <td>user</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>bambi</td>
+                            <td>supersecretpasswordtoo</td>
+                            <td>Juan</td>
+                            <td>Brambila</td>
+                            <td>juan@42ideas.mx</td>
+                            <td>user</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>adolph</td>
+                            <td>ihearthitler</td>
+                            <td>Gustavo</td>
+                            <td>Rubio</td>
+                            <td>gustavo@42ideas.mx</td>
+                            <td>admin</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>mistery</td>
+                            <td>nooneknowsthis</td>
+                            <td>Mistery</td>
+                            <td>Man</td>
+                            <td>mistery@42ideas.mx</td>
+                            <td>user</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
         <!--Javascript -->
         <script src="../js/jquery.js"></script>
