@@ -31,7 +31,19 @@
             </div>
         </div>
         <div class="container">
-
+            <form>
+                <fieldset>
+                    <legend>Schedule</legend>
+                    <label>ID</label>
+                    <input id="schedule_id" type="text" />
+                    <label>Check In</label>
+                    <input id="check_in" type="text" />
+                    <label>Check Out</label>
+                    <input Id="check_out" type="text" />
+                    <label>User Id</label>
+                    <input id="user_id" type="text" /> 
+                </fieldset>
+            </form>
         </div>
         <!--Javascript -->
         <script src="../js/jquery.js"></script>
