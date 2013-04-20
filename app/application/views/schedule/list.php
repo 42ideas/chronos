@@ -5,9 +5,9 @@
         <title>Chronos</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
-        <link href="../css/bootstrap.css" rel="stylesheet">
-        <link href="../css/bootstrap-responsive.css" rel="stylesheet">
-        <link href="../css/site.css" rel="stylesheet">
+        <link href="<?= base_url("css/bootstrap.css")?>" rel="stylesheet">
+        <link href="<?= base_url("css/bootstrap-responsive.css")?>" rel="stylesheet">
+        <link href="<?= base_url("css/site.css")?>" rel="stylesheet">
     </head>
     <body>
         <div class="navbar navbar-inverse navbar-fixed-top">
@@ -24,9 +24,9 @@
                             <li><a href="worklog">Worklog</a></li>
                             <li class="active"><a href="schedule">Schedule</a></li>
                             <li><a href="project">Project</a></li>
-                            <li><a href="users">Users</a></li>
-                            <li><a href="costumers">Costumers</a></li>
-                            <li><a href="reports">Reports</a></li>
+                            <li><a href="user">User</a></li>
+                            <li><a href="customer">Customer</a></li>
+                            <li><a href="report">Report</a></li>
                         </ul>
                     </div>
                 </div>
@@ -75,8 +75,8 @@
             </div>
         </div>
         <!--Javascript -->
-        <script src="../js/jquery.js"></script>
-        <script src="../js/bootstrap.js"></script>
+        <script src="<?= base_url("js/jquery.js")?>"></script>
+        <script src="<?= base_url("js/bootstrap.js")?>"></script>
         <!--End Javascript -->
     </body>
 </html>
