@@ -1,8 +1,14 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Report extends CI_Controller {
+	
 	public function index()
 	{
-		$this->load->view('report/list');
+		$data['page_title'] = "Report list";
+		$data['active_link'] = "report-menu";
+		
+		$this->load->view('inc/header', $data);
+		$this->load->view('report/list', $data);
+		$this->load->view('inc/footer', $data);
 	}
 }

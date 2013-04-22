@@ -40,7 +40,11 @@ class User_model extends CI_Model {
 		try {
 			//set values before insert
 			$this->db->set('username', $this->username);
-			$this->db->set('password', md5($this->password));
+
+			//update password only if we received text
+			if($this->password != '')
+				$this->db->set('password', md5($this->password));
+
 			$this->db->set('first_name', $this->first_name);
 			$this->db->set('last_name', $this->last_name);
 			$this->db->set('email', $this->email);
@@ -74,10 +78,11 @@ class User_model extends CI_Model {
 		}
 	}
 
-	function list($limit, $offset) 
+	function list_all($limit, $offset) 
 	{
 		try {
 			return $this->db->get('user', $limit, $offset);
+			
 		} catch (Exception $e) {
 			throw $e;
 		}

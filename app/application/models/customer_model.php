@@ -46,6 +46,8 @@ class Customer_model extends CI_Model
 			$this->db->set('description', $this->description);
 
 			$this->db->update('customer');
+		} catch (Exception $e) {
+			throw $e;
 		}
 	}
 

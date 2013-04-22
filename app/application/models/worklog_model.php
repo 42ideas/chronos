@@ -47,7 +47,7 @@ class Worklog_model extends CI_Model
 			$this->db->select('worklog.id, worklog.customer_id, worklog.project_id, worklog.user_id, 
 				worklog.description, worklog.start_time, worklog.end_time, customer.name as customer,
 				project.name as project, user.username as username, 
-				TIMEDIFF(worklog.end_time, worklog.start_time) as total_time');
+				TIMEDIFF(worklog.end_time, worklog.start_time) as  total_time', false);
 			$this->db->from('worklog');
 			$this->db->join('customer', 'customer.id = worklog.customer_id');
 			$this->db->join('project', 'project.id = worklog.project_id');
@@ -94,7 +94,7 @@ class Worklog_model extends CI_Model
 			$this->db->select('worklog.id, worklog.customer_id, worklog.project_id, worklog.user_id, 
 				worklog.description, worklog.start_time, worklog.end_time, customer.name as customer,
 				project.name as project, user.username as username, 
-				TIMEDIFF(worklog.end_time, worklog.start_time) as total_time');
+				TIMEDIFF(worklog.end_time, worklog.start_time) as  total_time', false);
 			$this->db->from('worklog');
 			$this->db->join('customer', 'customer.id = worklog.customer_id');
 			$this->db->join('project', 'project.id = worklog.project_id');
@@ -113,7 +113,7 @@ class Worklog_model extends CI_Model
 			$this->db->select('worklog.id, worklog.customer_id, worklog.project_id, worklog.user_id, 
 				worklog.description, worklog.start_time, worklog.end_time, customer.name as customer,
 				project.name as project, user.username as username, 
-				TIMEDIFF(worklog.end_time, worklog.start_time) as total_time');
+				TIMEDIFF(worklog.end_time, worklog.start_time) as  total_time', false);
 			$this->db->from('worklog');
 			$this->db->join('customer', 'customer.id = worklog.customer_id');
 			$this->db->join('project', 'project.id = worklog.project_id');
