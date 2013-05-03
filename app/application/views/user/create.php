@@ -4,15 +4,15 @@
     <fieldset>
         <legend>New User</legend>
         <div class="control-group">
-            <label class="control-label" for="username">Username</label>
+            <label class="control-label" for="username" >Username</label>
             <div class="controls">
-                <input type="text" id="username" name="username" placeholder="Username">
+                <input type="text" id="username" name="username" placeholder="Username" required>
             </div>
         </div>
         <div class="control-group">
             <label class="control-label" for="password">Password</label>
             <div class="controls">
-                <input type="password" id="password" name="password" placeholder="Password">
+                <input type="password" id="password" name="password" placeholder="Password"required>
             </div>
         </div>
         <div class="control-group">
@@ -36,7 +36,7 @@
         <div class="control-group">
             <label class="control-label" for="role">Role</label>
             <div class="controls">
-                <input type="text" id="role" name="role" placeholder="Role">
+                <input type="text" id="role" name="role" placeholder="Role" required>
             </div>
         </div>
         <input type="submit" class="btn" value="Create New User" />
