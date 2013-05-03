@@ -34,10 +34,8 @@ class Customer extends CI_Controller {
         
         public function create_customer()
         {
-            $this->load->library('firephp');
             $data['page_title'] = "Customer list";
             $data['active_link'] = "customer-menu";
-            $this->firephp->trace($_POST['name']);
             $this->Customer_model->name = $_POST['name'];
             $this->Customer_model->description = $_POST['description'];
             $this->Customer_model->create();

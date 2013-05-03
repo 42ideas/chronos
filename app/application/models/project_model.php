@@ -21,6 +21,7 @@ class Project_model extends CI_Model
 		try {
 			$this->db->set('name', $this->name);
 			$this->db->set('description', $this->description);
+                        $this->db->set('customer_id', $this->customer);
 			$this->db->insert('project');
 
 			return $this->db->insert_id();			
