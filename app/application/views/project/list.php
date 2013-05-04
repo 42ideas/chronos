@@ -11,7 +11,7 @@
 
     foreach ($projects->result() as $project) {
         $this->table->add_row(
-                $project->id, $project->name, $project->description, $project->customer
+                anchor(base_url('project/detail/' . $project->id), $project->id), $project->name, $project->description, $project->customer
         );
     }
 

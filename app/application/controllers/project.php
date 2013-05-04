@@ -10,6 +10,7 @@ class Project extends CI_Controller {
 
         $this->load->model('Project_model');
         $this->load->model('Customer_model');
+        $this->load->helper('form');
     }
 
     public function index() {
@@ -21,6 +22,26 @@ class Project extends CI_Controller {
         $this->load->view('inc/header', $data);
         $this->load->view('project/list', $data);
         $this->load->view('inc/footer', $data);
+    }
+    
+    public function detail($id) {
+        $data['page_title'] = "Edit Project";
+        $data['active_link'] = "project-menu";
+        
+        $data['project'] = $this->Project_model->read($id);
+
+        $this->load->view('inc/header', $data);
+        $this->load->view('project/detail', $data);
+        $this->load->view('inc/footer', $data);
+    }
+    
+    public function edit_project() {
+        $this->Project_model->name = $_POST['name'];
+        $this->Project_model->description = $_POST['description'];
+        $this->Project_model->id = $_POST['id'];
+        $this->Project_model->update();
+
+        $this->index();
     }
 
     public function create() {

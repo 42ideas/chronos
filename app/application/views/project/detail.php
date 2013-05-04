@@ -1,53 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Chronos</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="">
-        <link href="../css/bootstrap.css" rel="stylesheet">
-        <link href="../css/bootstrap-responsive.css" rel="stylesheet">
-    </head>
-    <body>
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container">
-                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="brand" href="#">Chronos</a>
-                    <div class="nav-collapse collapse">
-                        <ul class="nav">
-                            <li><a href="worklog">Worklog</a></li>
-                            <li class="active"><a href="schedule">Schedule</a></li>
-                            <li><a href="users">Users</a></li>
-                            <li><a href="costumers">Costumers</a></li>
-                            <li><a href="reports">Reports</a></li>
-                        </ul>
-                    </div>
-                </div>
+
+<div class="row">
+    <legend>Project</legend>
+    <?php echo form_open(base_url('project/edit_project')); ?>
+    <fieldset>
+        <input type="hidden" id="id" name="id" value="<?php echo $project->result()[0]->id ?>" />
+        <div class="control-group">
+            <label class="control-label" for="name">Name</label>
+            <div class="controls">
+                <input type="text" id="name" name="name" placeholder="Name" value="<?php echo $project->result()[0]->name ?>" required>
             </div>
         </div>
-        <div class="container">
-           <form>
-                <fieldset>
-                    <legend>Project</legend>
-                    <label>ID</label>
-                    <input id="project_id" type="text" />
-                    <label>Name</label>
-                    <input id="name" type="text" />
-                    <label>Description</label>
-                    <input id="description" type="text" />
-                    <label>Customer ID</label>
-                    <input id="customer_id" type="text" />
-                </fieldset>
-            </form>
+        <div class="control-group">
+            <label class="control-label" for="description">Description</label>
+            <div class="controls">
+                <input type="text" id="description" name="description" placeholder="Description" value="<?php echo $project->result()[0]->description ?>" required>
+            </div>
         </div>
-        <!--Javascript -->
-        <script src="../js/jquery.js"></script>
-        <script src="../js/bootstrap.js"></script>
-        <!--End Javascript -->
-    </body>
-</html>
+        
+        <input type="submit" class="btn" value="Edit Project" />
+    </fieldset>
+    <?php echo form_close(); ?>
+</div>
