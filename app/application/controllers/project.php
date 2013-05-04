@@ -39,7 +39,7 @@ class Project extends CI_Controller {
     public function create_project() {
         $this->Project_model->name = $_POST['name'];
         $this->Project_model->description = $_POST['description'];
-        $this->Project_model->customer = $_POST['customer'];
+        $this->Project_model->customer_id = $_POST['customer'];
         $this->Project_model->create();
         
         $this->index();

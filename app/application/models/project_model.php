@@ -9,7 +9,7 @@ class Project_model extends CI_Model
 	var $id;
 	var $name;
 	var $description;
-	var $customer;
+	var $customer_id;
 	
 	function __construct()
 	{
