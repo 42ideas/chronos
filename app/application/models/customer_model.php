@@ -44,7 +44,7 @@ class Customer_model extends CI_Model
 		try {
 			$this->db->set('name', $this->name);
 			$this->db->set('description', $this->description);
-
+                        $this->db->where('id', $this->id);
 			$this->db->update('customer');
 		} catch (Exception $e) {
 			throw $e;

@@ -11,7 +11,7 @@
 
         foreach($customers->result() as $customer) {
             $this->table->add_row(
-                $customer->id,
+                anchor(base_url('customer/detail/' . $customer->id), $customer->id),
                 $customer->name,
                 $customer->description
             );
