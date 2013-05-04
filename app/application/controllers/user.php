@@ -9,6 +9,8 @@ class User extends CI_Controller {
         parent::__construct();
 
         $this->load->model('User_model');
+        $this->load->helper('form');
+        $this->load->helper('url');
     }
 
     public function index() {
@@ -22,8 +24,30 @@ class User extends CI_Controller {
         $this->load->view('inc/footer', $data);
     }
 
+    public function detail($id) {
+        $data['page_title'] = "Edit User";
+        $data['active_link'] = "user-menu";
+        $data['user'] = $this->User_model->read($id);
+
+        $this->load->view('inc/header', $data);
+        $this->load->view('user/detail', $data);
+        $this->load->view('inc/footer', $data);
+    }
+    
+    public function edit_user() {
+        $this->User_model->username = $_POST['username'];
+        $this->User_model->password = $_POST['password'];
+        $this->User_model->first_name = $_POST['first_name'];
+        $this->User_model->last_name = $_POST['last_name'];
+        $this->User_model->email = $_POST['email'];
+        $this->User_model->role = $_POST['role'];
+        $this->User_model->id = $_POST['id'];
+        $this->User_model->update();
+
+        $this->index();
+    }
+
     public function create() {
-        $this->load->helper('form');
 
         $data['page_title'] = "Create New User";
         $data['active_link'] = "user-menu";

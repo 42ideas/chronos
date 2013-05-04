@@ -11,7 +11,7 @@
 
     foreach ($users->result() as $user) {
         $this->table->add_row(
-                $user->id, $user->username, $user->first_name, $user->last_name, $user->email, $user->role
+                anchor(base_url('user/detail/' . $user->id), $user->id), $user->username, $user->first_name, $user->last_name, $user->email, $user->role
         );
     }
 
