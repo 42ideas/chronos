@@ -71,7 +71,7 @@ class Worklog_model extends CI_Model
 			$this->db->set('end_time', $this->end_time);
 
 			$this->db->where('id', $this->id);
-			$this->db->update('schedule');
+			$this->db->update('worklog');
 
 		} catch (Exception $e) {
 			throw $e;

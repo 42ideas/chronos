@@ -12,7 +12,7 @@
 
     foreach ($checkins->result() as $checkin) {
         $this->table->add_row(
-                $checkin->id, $checkin->full_name, date("d-M h:i a", human_to_unix($checkin->check_in)), date("d-M h:i a", human_to_unix($checkin->check_out)), $checkin->total_time
+                anchor(base_url('schedule/detail/' . $checkin->id), $checkin->id), $checkin->full_name, date("d-M h:i a", human_to_unix($checkin->check_in)), date("d-M h:i a", human_to_unix($checkin->check_out)), $checkin->total_time
         );
     }
 
@@ -20,5 +20,5 @@
     ?>                
 </div>
 <div class="row">
-    <a href="<?php echo base_url('schedule/create'); ?>" class="btn">New Project</a>
+    <a href="<?php echo base_url('schedule/create'); ?>" class="btn">New Schedule</a>
 </div>

@@ -56,6 +56,8 @@ class Schedule_model extends CI_Model {
 			$this->db->set('check_out', $this->check_out);
 
 			$this->db->where('id', $this->id);
+                        
+                        $this->db->update('schedule');
 		} catch (Exception $e) {
 			throw $e;
 		}

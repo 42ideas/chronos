@@ -11,7 +11,7 @@
 
     foreach ($logs->result() as $log) {
         $this->table->add_row(
-                $log->id, $log->customer, $log->project, $log->username, $log->description, date("d-M h:i a", human_to_unix($log->start_time)), date("d-M h:i a", human_to_unix($log->end_time)), $log->total_time
+                anchor(base_url('worklog/detail/' . $log->id), $log->id), $log->customer, $log->project, $log->username, $log->description, date("d-M h:i a", human_to_unix($log->start_time)), date("d-M h:i a", human_to_unix($log->end_time)), $log->total_time
         );
     }
 

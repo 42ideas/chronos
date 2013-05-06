@@ -1,59 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Chronos</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="">
-        <link href="../css/bootstrap.css" rel="stylesheet">
-        <link href="../css/bootstrap-responsive.css" rel="stylesheet">
-    </head>
-    <body>
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container">
-                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="brand" href="./">Chronos</a>
-                    <div class="nav-collapse collapse">
-                        <ul class="nav">
-                            <li class="active"><a href="worklog">Worklog</a></li>
-                            <li><a href="schedule">Schedule</a></li>
-                            <li><a href="users">Users</a></li>
-                            <li><a href="costumers">Costumers</a></li>
-                            <li><a href="reports">Reports</a></li>
-                        </ul>
-                    </div>
-                </div>
+
+<div class="row">
+    <?php echo form_open(base_url('worklog/edit_worklog')); ?>
+    <fieldset>
+        <legend>Edit Worklog</legend>
+        <input type="hidden" id="id" name="id" value="<?php echo $worklog->result()[0]->id ?>" />
+        <div class="control-group">
+            <label class="control-label" for="description">Description</label>
+            <div class="controls">
+                <input type="text" id="description" name="description" placeholder="Description" value="<?php echo $worklog->result()[0]->description ?>"/>
             </div>
         </div>
-        <div class="container">
-            <form>
-                <fieldset>
-                    <legend>Worklog</legend>
-                    <label>ID</label>
-                    <input id="worklog_id" type="text" />
-                    <label>Customer ID</label>
-                    <input id="customer_id" type="text" />
-                    <label>Project ID</label>
-                    <input id="project_id" type="text" />
-                    <label>User ID</label>
-                    <input id="user_id" type="text" />
-                    <label>Description</label>
-                    <input id="description" type="text" />
-                    <label>Start Time</label>
-                    <input id="start_time" type="text" />
-                    <label>End Time</label>
-                    <input id="end_time" type="text" />
-                </fieldset>
-            </form>
+        <div class="control-group">
+            <label class="control-label" for="project_id">Project</label>
+            <div class="controls">
+                <select id="project_id" name="project_id">
+                    <?php
+                    foreach ($project_list->result() as $project) {
+                        ?>
+                        <option value="<?php echo $project->id ?>" <?php 
+                                if($project->id == $worklog->result()[0]->project_id) {
+                                    echo "selected";
+                                }
+                            ?>><?php echo $project->name ?></option>
+                    <?php }
+                    ?>
+                </select>
+            </div>
         </div>
-        <!--Javascript -->
-        <script src="../js/jquery.js"></script>
-        <script src="../js/bootstrap.js"></script>
-        <!--End Javascript -->
-    </body>
-</html>
+        <div class="control-group">
+            <label class="control-label" for="date">Date</label>
+            <div class="controls">
+                <input type="text" id="date" name="date" placeholder="YYYY-mm-dd" value="<?php echo explode(" ", $worklog->result()[0]->start_time)[0]; ?>">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="start_time">Start Time</label>
+            <div class="controls">
+                <input type="text" id="start_time" name="start_time" placeholder="HH:MM" value="<?php echo explode(" ", $worklog->result()[0]->start_time)[1]; ?>">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="end_time">End Time</label>
+            <div class="controls">
+                <input type="text" id="end_time" name="end_time" placeholder="HH:MM" value="<?php echo explode(" ", $worklog->result()[0]->end_time)[1]; ?>">
+            </div>
+        </div>
+        <input type="submit" class="btn" value="Edit Worklog Entry" />
+    </fieldset>
+    <?php echo form_close(); ?>
+</div>
