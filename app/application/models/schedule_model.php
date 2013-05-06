@@ -89,6 +89,25 @@ class Schedule_model extends CI_Model {
 			throw $e;
 		}
 	}
+        
+        function list_by_user($limit, $offset, $user_id) 
+	{
+		try {
+			$this->db->select("schedule.id, schedule.check_in, schedule.check_out, schedule.user_id, 
+				user.id, user.username, user.first_name, user.last_name, 
+				CONCAT(user.first_name, ' ' ,user.last_name) as full_name,
+				TIMEDIFF(schedule.check_out, schedule.check_in) as  total_time", FALSE);
+			$this->db->from('schedule');
+			$this->db->join('user', 'user.id = schedule.user_id');
+			$this->db->limit($limit, $offset);
+                        
+                        $this->db->where('user.id', $user_id);
+
+			return $this->db->get();
+		} catch (Exception $e) {
+			throw $e;
+		}
+	}
 
 	function search($keyword) 
 	{
