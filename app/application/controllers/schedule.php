@@ -18,7 +18,11 @@ class Schedule extends CI_Controller {
         $data['active_link'] = "schedule-menu";
 
         $data['checkins'] = $this->Schedule_model->list_all(MAX_RECORDS_PER_PAGE, 0);
+        $this->load->library('firephp');
 
+        $this->firephp->log($data['checkins']->result());
+        //$this->firephp->trace('hola');
+        
         $this->load->view('inc/header', $data);
         $this->load->view('schedule/list', $data);
         $this->load->view('inc/footer', $data);

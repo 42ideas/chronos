@@ -58,7 +58,7 @@ class Worklog extends CI_Controller {
         $this->Worklog_model->id = $_POST['id'];
         
         //Need to change this when login is made
-        $this->Worklog_model->user_id = 2; //$this->GetCurrentUser();
+        $this->Worklog_model->user_id = 1; //$this->GetCurrentUser();
         
         
         $this->Worklog_model->update();
@@ -100,7 +100,7 @@ class Worklog extends CI_Controller {
         $this->Worklog_model->end_time = $end_time_formatted;
         
         //Need to change this when login is made
-        $this->Worklog_model->user_id = 2; //$this->GetCurrentUser();
+        $this->Worklog_model->user_id = 1; //$this->GetCurrentUser();
         
         $this->Worklog_model->create();
         

@@ -19,9 +19,9 @@ class Dashboard extends CI_Controller {
 
         $data['page_title'] = "Dashboard";
         $data['active_link'] = "";
-
-        $data['schedules'] = $this->Schedule_model->list_by_user(5, 0, 2);
-        $data['logs'] = $this->Worklog_model->list_by_user(5, 0, 2);
+        
+        $data['schedules'] = $this->Schedule_model->list_by_user(5, 0, 1);
+        $data['logs'] = $this->Worklog_model->list_by_user(5, 0, 1);
 
         $this->load->view('inc/header', $data);
         $this->load->view('dashboard/index', $data);
