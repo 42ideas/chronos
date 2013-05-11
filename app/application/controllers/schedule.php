@@ -86,5 +86,19 @@ class Schedule extends CI_Controller {
 
         $this->index();
     }
-
+    
+    public function check_in() {
+        $check_in_formatted = date("Y-m-d H:i:s");
+        
+        $this->load->library("firephp");
+        
+        $this->Schedule_model->check_in = $check_in_formatted;
+        $this->Schedule_model->user_id = $this->session->userdata('user_id');
+        
+        $this->firephp->log($this->session->userdata('user_id'));
+        
+        $this->Schedule_model->create();
+        
+        $this->index();
+    }
 }

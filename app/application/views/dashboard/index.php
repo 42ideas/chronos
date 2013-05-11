@@ -31,8 +31,12 @@
                     anchor(base_url('schedule/detail/' . $schedule->id), $schedule->id), date("d-M h:i a", human_to_unix($schedule->check_in)), date("d-M h:i a", human_to_unix($schedule->check_out)), $schedule->total_time
             );
         }
-
+ 
         echo $this->table->generate();
         ?>    
     </div>
+    <?php
+        echo anchor(base_url('schedule/check_in/'), 'Check-In', 'class="btn btn-success" id="checkInBtn"');
+        echo anchor(base_url('schedule/check_out/'), 'Check-Out', 'class="btn btn-danger" id="checkOutBtn"');
+    ?>
 </div>
