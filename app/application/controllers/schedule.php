@@ -7,7 +7,7 @@ class Schedule extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
-
+        $this->session->is_logged_in();
         $this->load->model('Schedule_model');
         $this->load->model('User_model');
         $this->load->helper('form');

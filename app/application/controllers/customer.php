@@ -7,7 +7,7 @@ class Customer extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
-
+        $this->session->is_logged_in();
         $this->load->model('Customer_model');
         $this->load->helper('form');
     }

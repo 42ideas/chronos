@@ -7,7 +7,7 @@ class User extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
-
+        $this->session->is_logged_in();
         $this->load->model('User_model');
         $this->load->helper('form');
         $this->load->helper('url');
