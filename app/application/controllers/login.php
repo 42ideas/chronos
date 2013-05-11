@@ -20,7 +20,7 @@ class Login extends CI_Controller {
 
         $data['page_title'] = "Login";
         $data['active_link'] = "";
-
+        
         $this->load->view('inc/header', $data);
         $this->load->view('login/index', $data);
         $this->load->view('inc/footer', $data);
@@ -30,10 +30,11 @@ class Login extends CI_Controller {
         $query = $this->User_model->validate();
         $this->load->library('firephp');
         $this->firephp->log($query);
-        if ($query) {
+        if ($query > -1) {
             $sessionData = array(
                 'username' => $this->input->post('username'),
-                'is_logged_in' => true
+                'is_logged_in' => true,
+                'user_id' => $query
             );
             
             $this->session->set_userdata($sessionData);

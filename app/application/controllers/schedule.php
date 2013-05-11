@@ -81,7 +81,7 @@ class Schedule extends CI_Controller {
         
         $this->Schedule_model->check_out = $check_out_formatted;
         
-        $this->Schedule_model->user_id = $_POST['user_id'];
+        $this->Schedule_model->user_id = $this->session->userdata('user_id');
         $this->Schedule_model->create();
 
         $this->index();
