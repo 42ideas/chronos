@@ -13,7 +13,7 @@
         <div class="control-group">
             <label class="control-label" for="description">Description</label>
             <div class="controls">
-                <input type="text" id="description" name="description" placeholder="Description" value="<?php echo $customer->result()[0]->description ?>" required>
+                <textarea id="description" rows="3" name="description" placeholder="Description" required><?php echo $customer->result()[0]->description ?></textarea>
             </div>
         </div>
         <input type="submit" class="btn" value="Edit Customer" />

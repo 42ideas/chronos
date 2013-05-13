@@ -7,7 +7,7 @@
         <div class="control-group">
             <label class="control-label" for="description">Description</label>
             <div class="controls">
-                <input type="text" id="description" name="description" placeholder="Description" value="<?php echo $worklog->result()[0]->description ?>"/>
+                <textarea rows="5" col="20" id="description" name="description" placeholder="Description"><?php echo $worklog->result()[0]->description ?></textarea>
             </div>
         </div>
         <div class="control-group">
@@ -30,19 +30,13 @@
         <div class="control-group">
             <label class="control-label" for="start_time">Start Time</label>
             <div class="controls">
-                <div class="input-append date form_datetime">
-                    <input size="16" type="text" id="start_time" name="start_time"  value="<?php echo $worklog->result()[0]->start_time;?>" readonly>
-                    <span class="add-on"><i class="icon-th"></i></span>
-                </div>
+                <input size="16" type="text" id="start_time" name="start_time" class="form_datetime" value="<?php echo $worklog->result()[0]->start_time;?>" readonly>
             </div>
         </div>
         <div class="control-group">
             <label class="control-label" for="end_time">End Time</label>
             <div class="controls">
-                <div class="input-append date form_datetime">
-                    <input size="16" type="text" id="end_time" name="end_time" value="<?php echo $worklog->result()[0]->end_time; ?>" readonly>
-                    <span class="add-on"><i class="icon-th"></i></span>
-                </div>
+                <input size="16" type="text" id="end_time" name="end_time" class="form_datetime" value="<?php echo $worklog->result()[0]->end_time; ?>" readonly>
             </div>
         </div>
         <input type="submit" class="btn" value="Edit Worklog Entry" />
