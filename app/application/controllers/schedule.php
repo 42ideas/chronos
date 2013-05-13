@@ -17,7 +17,12 @@ class Schedule extends CI_Controller {
         $data['page_title'] = "Schedule list";
         $data['active_link'] = "schedule-menu";
 
-        $data['checkins'] = $this->Schedule_model->list_all(MAX_RECORDS_PER_PAGE, 0);
+        if(strtolower($this->session->userdata('role')) != 'admin') {
+            $data['checkins'] = $this->Schedule_model->list_by_user(MAX_RECORDS_PER_PAGE, 0, $this->session->userdata('user_id'));
+        }
+        else {
+            $data['checkins'] = $this->Schedule_model->list_all(MAX_RECORDS_PER_PAGE, 0);
+        }
         $this->load->library('firephp');
 
         $this->firephp->log($data['checkins']->result());
@@ -62,8 +67,6 @@ class Schedule extends CI_Controller {
 
         $data['page_title'] = "New Schedule";
         $data['active_link'] = "schedule-menu";
-
-        $data['user_list'] = $this->User_model->list_all(MAX_RECORDS_PER_PAGE, 0);
 
         $this->load->view('inc/header', $data);
         $this->load->view('schedule/create', $data);

@@ -110,7 +110,7 @@ class User_model extends CI_Model {
             $query = $this->db->get('user');
             
             if($query->num_rows == 1) {
-                return $query->result()[0]->id;
+                return $query->result()[0];
             }
             return -1;
         }

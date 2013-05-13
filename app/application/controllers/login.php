@@ -30,11 +30,13 @@ class Login extends CI_Controller {
         $query = $this->User_model->validate();
         $this->load->library('firephp');
         $this->firephp->log($query);
-        if ($query > -1) {
+        if ($query != -1 && $query != null) {
             $sessionData = array(
                 'username' => $this->input->post('username'),
                 'is_logged_in' => true,
-                'user_id' => $query
+                'user_id' => $query->id,
+                'role' => $query->role,
+                'full_name' => $query->first_name . ' ' . $query->last_name
             );
             
             $this->session->set_userdata($sessionData);

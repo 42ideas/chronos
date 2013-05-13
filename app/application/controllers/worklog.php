@@ -18,9 +18,12 @@ class Worklog extends CI_Controller {
     public function index() {
         $data['page_title'] = "Worklog list";
         $data['active_link'] = "worklog-menu";
-
-        $data['logs'] = $this->Worklog_model->list_all(MAX_RECORDS_PER_PAGE, 0);
-
+        if(strtolower($this->session->userdata('role')) != 'admin') {
+            $data['logs'] = $this->Worklog_model->list_by_user(MAX_RECORDS_PER_PAGE, 0, $this->session->userdata('user_id'));
+        }
+        else {
+            $data['logs'] = $this->Worklog_model->list_all(MAX_RECORDS_PER_PAGE, 0);
+        }
         $this->load->view('inc/header', $data);
         $this->load->view('worklog/list', $data);
         $this->load->view('inc/footer', $data);

@@ -32,26 +32,37 @@
                     <a class="brand" href="<?php echo base_url('dashboard'); ?>">Chronos</a>
                     <div class="nav-collapse collapse">
                         <ul class="nav">
-                            <li><a href="<?php echo base_url('worklog'); ?>" id="worklog-menu">Worklog</a></li>
-                            <li><a href="<?php echo base_url('schedule'); ?>" id="schedule-menu">Schedule</a></li>
-                            <li><a href="<?php echo base_url('project'); ?>" id="project-menu">Projects</a></li>
-                            <li><a href="<?php echo base_url('user'); ?>" id="user-menu">Users</a></li>
-                            <li><a href="<?php echo base_url('customer'); ?>" id="customer-menu">Customers</a></li>
-                            <li><a href="<?php echo base_url('report'); ?>" id="report-menu">Reports</a></li>
-                        </ul>
-                        <div class="clear-r"></div>
-                    </div>
-                    <?php 
-                       if($this->session->userdata('is_logged_in') == true) { 
-                    ?>
-                    <div class="nav-collapse collapse right">
-                        <ul class="nav">
-                            <li><a href="<?php echo base_url('user/logout'); ?>">Log out</a></li>
-                        </ul>
-                    </div>
-                    <?php 
-                        } 
-                    ?>
+                            <?php
+                                if ($this->session->userdata('is_logged_in') == true) {
+                            ?>
+                                <li><a href="<?php echo base_url('worklog'); ?>" id="worklog-menu">Worklog</a></li>
+                                <li><a href="<?php echo base_url('schedule'); ?>" id="schedule-menu">Schedule</a></li>
+                                <?php
+                                    if (strtolower($this->session->userdata('role')) == 'admin') {
+                                ?>
+                                <li><a href="<?php echo base_url('project'); ?>" id="project-menu">Projects</a></li>
+                                <li><a href="<?php echo base_url('user'); ?>" id="user-menu">Users</a></li>
+                                <li><a href="<?php echo base_url('customer'); ?>" id="customer-menu">Customers</a></li>
+                                <li><a href="<?php echo base_url('report'); ?>" id="report-menu">Reports</a></li>
+                            <?php
+                                    }
+                                }
+                            ?>
+                            </ul>
+                            <div class="clear-r"></div>
+                        </div>
+                        <?php
+                            if ($this->session->userdata('is_logged_in') == true) {
+                        ?>
+                            <div class="nav-collapse collapse right">
+                                <ul class="nav">
+                                    <li><a>Welcome <?php echo $this->session->userdata('full_name'); ?></a></li>
+                                    <li><a href="<?php echo base_url('user/logout'); ?>">Log out</a></li>
+                                </ul>
+                            </div>
+                        <?php
+                            }
+                        ?>
                 </div>
             </div>
         </div>
