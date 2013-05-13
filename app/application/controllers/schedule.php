@@ -23,11 +23,7 @@ class Schedule extends CI_Controller {
         else {
             $data['checkins'] = $this->Schedule_model->list_all(MAX_RECORDS_PER_PAGE, 0);
         }
-        $this->load->library('firephp');
 
-        $this->firephp->log($data['checkins']->result());
-        //$this->firephp->trace('hola');
-        
         $this->load->view('inc/header', $data);
         $this->load->view('schedule/list', $data);
         $this->load->view('inc/footer', $data);
@@ -93,12 +89,8 @@ class Schedule extends CI_Controller {
     public function check_in() {
         $check_in_formatted = date("Y-m-d H:i:s");
         
-        $this->load->library("firephp");
-        
         $this->Schedule_model->check_in = $check_in_formatted;
         $this->Schedule_model->user_id = $this->session->userdata('user_id');
-        
-        $this->firephp->log($this->session->userdata('user_id'));
         
         $this->Schedule_model->create();
         

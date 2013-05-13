@@ -85,7 +85,6 @@ class Worklog extends CI_Controller {
     }
 
     public function create_worklog() {
-        $this->load->library("firephp");
         $this->Worklog_model->description = $_POST['description'];
         $this->Worklog_model->project_id = $_POST['project_id'];
         $project = $this->Project_model->read($_POST['project_id']);

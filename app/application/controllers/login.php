@@ -28,8 +28,6 @@ class Login extends CI_Controller {
 
     public function validate() {
         $query = $this->User_model->validate();
-        $this->load->library('firephp');
-        $this->firephp->log($query);
         if ($query != -1 && $query != null) {
             $sessionData = array(
                 'username' => $this->input->post('username'),
