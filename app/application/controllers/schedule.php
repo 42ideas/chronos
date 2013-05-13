@@ -43,13 +43,15 @@ class Schedule extends CI_Controller {
     public function edit_schedule() {
         $check_in = strtotime($_POST['check_in']);
         $check_in_formatted = date("Y-m-d H:i:s", $check_in);
-        
+        $this->load->library('firephp');
+        $this->firephp->log($check_in_formatted);
         $this->Schedule_model->check_in = $check_in_formatted;
         
         $check_out = strtotime($_POST['check_out']);
         $check_out_formatted = date("Y-m-d H:i:s", $check_out);
         
         $this->Schedule_model->check_out = $check_out_formatted;
+        $this->firephp->log($check_out_formatted);
         
         $this->Schedule_model->id = $_POST['id'];
         

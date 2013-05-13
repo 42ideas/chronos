@@ -2,7 +2,7 @@
 <div class="row">
     <?php echo form_open(base_url('worklog/create_worklog')); ?>
     <fieldset>
-        <legend>New Project</legend>
+        <legend>New Work Log Entry</legend>
         <div class="control-group">
             <label class="control-label" for="description">Description</label>
             <div class="controls">
@@ -23,21 +23,21 @@
             </div>
         </div>
         <div class="control-group">
-            <label class="control-label" for="date">Date</label>
-            <div class="controls">
-                <input type="text" id="date" name="date" placeholder="YYYY-mm-dd">
-            </div>
-        </div>
-        <div class="control-group">
             <label class="control-label" for="start_time">Start Time</label>
             <div class="controls">
-                <input type="text" id="start_time" name="start_time" placeholder="HH:MM">
+                <div class="input-append date form_datetime">
+                    <input size="16" type="text" id="start_time" name="start_time" value="" readonly>
+                    <span class="add-on"><i class="icon-th"></i></span>
+                </div>
             </div>
         </div>
         <div class="control-group">
             <label class="control-label" for="end_time">End Time</label>
             <div class="controls">
-                <input type="text" id="end_time" name="end_time" placeholder="HH:MM">
+                <div class="input-append date form_datetime">
+                    <input size="16" type="text" id="end_time" name="end_time" value="" readonly>
+                    <span class="add-on"><i class="icon-th"></i></span>
+                </div>
             </div>
         </div>
         <input type="submit" class="btn" value="Create New Worklog Entry" />

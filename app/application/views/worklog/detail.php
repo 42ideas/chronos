@@ -28,21 +28,21 @@
             </div>
         </div>
         <div class="control-group">
-            <label class="control-label" for="date">Date</label>
-            <div class="controls">
-                <input type="text" id="date" name="date" placeholder="YYYY-mm-dd" value="<?php echo explode(" ", $worklog->result()[0]->start_time)[0]; ?>">
-            </div>
-        </div>
-        <div class="control-group">
             <label class="control-label" for="start_time">Start Time</label>
             <div class="controls">
-                <input type="text" id="start_time" name="start_time" placeholder="HH:MM" value="<?php echo explode(" ", $worklog->result()[0]->start_time)[1]; ?>">
+                <div class="input-append date form_datetime">
+                    <input size="16" type="text" id="start_time" name="start_time"  value="<?php echo $worklog->result()[0]->start_time;?>" readonly>
+                    <span class="add-on"><i class="icon-th"></i></span>
+                </div>
             </div>
         </div>
         <div class="control-group">
             <label class="control-label" for="end_time">End Time</label>
             <div class="controls">
-                <input type="text" id="end_time" name="end_time" placeholder="HH:MM" value="<?php echo explode(" ", $worklog->result()[0]->end_time)[1]; ?>">
+                <div class="input-append date form_datetime">
+                    <input size="16" type="text" id="end_time" name="end_time" value="<?php echo $worklog->result()[0]->end_time; ?>" readonly>
+                    <span class="add-on"><i class="icon-th"></i></span>
+                </div>
             </div>
         </div>
         <input type="submit" class="btn" value="Edit Worklog Entry" />

@@ -5,9 +5,14 @@
         <!--Javascript -->
         <script src="<?php echo base_url('js/jquery.js') ?>"></script>
         <script src="<?php echo base_url('js/bootstrap.js') ?>"></script>
+        <script src="<?php echo base_url('js/bootstrap-datetimepicker.js') ?>"></script>
         <script type="text/javascript">
             $(document).ready(function() {
                 $("#<?php echo $active_link ?>").parent('li').addClass('active');
+                $('.form_datetime').datetimepicker({
+                    format: "yyyy-mm-dd hh:ii", 
+                    minuteStep: 30
+                });
             });
         </script>
         <!--End Javascript -->
@@ -18,6 +23,7 @@
         <meta name="description" content="">
         <link href="<?php echo base_url('css/bootstrap.css') ?>" rel="stylesheet">
         <link href="<?php echo base_url('css/bootstrap-responsive.css') ?>" rel="stylesheet">
+        <link href="<?php echo base_url('css/datetimepicker.css') ?>" rel="stylesheet">
         <link href="<?php echo base_url('css/site.css') ?>" rel="stylesheet">
     </head>
     <body>
@@ -33,36 +39,36 @@
                     <div class="nav-collapse collapse">
                         <ul class="nav">
                             <?php
-                                if ($this->session->userdata('is_logged_in') == true) {
-                            ?>
+                            if ($this->session->userdata('is_logged_in') == true) {
+                                ?>
                                 <li><a href="<?php echo base_url('worklog'); ?>" id="worklog-menu">Worklog</a></li>
                                 <li><a href="<?php echo base_url('schedule'); ?>" id="schedule-menu">Schedule</a></li>
                                 <?php
-                                    if (strtolower($this->session->userdata('role')) == 'admin') {
-                                ?>
-                                <li><a href="<?php echo base_url('project'); ?>" id="project-menu">Projects</a></li>
-                                <li><a href="<?php echo base_url('user'); ?>" id="user-menu">Users</a></li>
-                                <li><a href="<?php echo base_url('customer'); ?>" id="customer-menu">Customers</a></li>
-                                <li><a href="<?php echo base_url('report'); ?>" id="report-menu">Reports</a></li>
-                            <?php
-                                    }
+                                if (strtolower($this->session->userdata('role')) == 'admin') {
+                                    ?>
+                                    <li><a href="<?php echo base_url('project'); ?>" id="project-menu">Projects</a></li>
+                                    <li><a href="<?php echo base_url('user'); ?>" id="user-menu">Users</a></li>
+                                    <li><a href="<?php echo base_url('customer'); ?>" id="customer-menu">Customers</a></li>
+                                    <li><a href="<?php echo base_url('report'); ?>" id="report-menu">Reports</a></li>
+                                    <?php
                                 }
+                            }
                             ?>
+                        </ul>
+                        <div class="clear-r"></div>
+                    </div>
+                    <?php
+                    if ($this->session->userdata('is_logged_in') == true) {
+                        ?>
+                        <div class="nav-collapse collapse right">
+                            <ul class="nav">
+                                <li><a>Welcome <?php echo $this->session->userdata('full_name'); ?></a></li>
+                                <li><a href="<?php echo base_url('user/logout'); ?>">Log out</a></li>
                             </ul>
-                            <div class="clear-r"></div>
                         </div>
                         <?php
-                            if ($this->session->userdata('is_logged_in') == true) {
-                        ?>
-                            <div class="nav-collapse collapse right">
-                                <ul class="nav">
-                                    <li><a>Welcome <?php echo $this->session->userdata('full_name'); ?></a></li>
-                                    <li><a href="<?php echo base_url('user/logout'); ?>">Log out</a></li>
-                                </ul>
-                            </div>
-                        <?php
-                            }
-                        ?>
+                    }
+                    ?>
                 </div>
             </div>
         </div>

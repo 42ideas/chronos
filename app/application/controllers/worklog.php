@@ -49,12 +49,12 @@ class Worklog extends CI_Controller {
         $this->Worklog_model->customer_id = $project->result()[0]->customer_id;
         
         
-        $start_time = strtotime($_POST['date'] . ' ' .$_POST['start_time']);
+        $start_time = strtotime($_POST['start_time']);
         $start_time_formatted = date("Y-m-d H:i", $start_time);
         
         $this->Worklog_model->start_time = $start_time_formatted;
         
-        $end_time = strtotime($_POST['date'] . ' ' .$_POST['end_time']);
+        $end_time = strtotime($_POST['end_time']);
         $end_time_formatted = date("Y-m-d H:i", $end_time);
         
         $this->Worklog_model->end_time = $end_time_formatted;
@@ -91,12 +91,12 @@ class Worklog extends CI_Controller {
         $this->Worklog_model->customer_id = $project->result()[0]->customer_id;
         
         
-        $start_time = strtotime($_POST['date'] . ' ' .$_POST['start_time']);
+        $start_time = strtotime($_POST['start_time']);
         $start_time_formatted = date("Y-m-d H:i", $start_time);
         
         $this->Worklog_model->start_time = $start_time_formatted;
         
-        $end_time = strtotime($_POST['date'] . ' ' .$_POST['end_time']);
+        $end_time = strtotime($_POST['end_time']);
         $end_time_formatted = date("Y-m-d H:i", $end_time);
         
         $this->Worklog_model->end_time = $end_time_formatted;
