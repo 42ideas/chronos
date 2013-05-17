@@ -60,7 +60,7 @@
                     <?php
                     if ($this->session->userdata('is_logged_in') == true) {
                         ?>
-                        <div class="nav-collapse collapse right">
+                        <div class="nav-collapse collapse pull-right">
                             <ul class="nav">
                                 <li><a>Welcome <?php echo $this->session->userdata('full_name'); ?></a></li>
                                 <li><a href="<?php echo base_url('user/logout'); ?>">Log out</a></li>

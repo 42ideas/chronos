@@ -27,6 +27,7 @@ class User extends CI_Controller {
     public function detail($id) {
         $data['page_title'] = "Edit User";
         $data['active_link'] = "user-menu";
+        
         $data['user'] = $this->User_model->read($id);
 
         $this->load->view('inc/header', $data);
@@ -72,5 +73,11 @@ class User extends CI_Controller {
     public function logout() {
         $this->session->sess_destroy();
         redirect(base_url('login/index'));
+    }
+    
+    public function delete($id) {
+        $this->User_model->delete($id);
+        
+        $this->index();
     }
 }

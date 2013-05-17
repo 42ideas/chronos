@@ -98,4 +98,10 @@ class Schedule extends CI_Controller {
         
         $this->index();
     }
+    
+    public function delete($id) {
+        $this->Schedule_model->delete($id);
+        
+        $this->index();
+    }
 }

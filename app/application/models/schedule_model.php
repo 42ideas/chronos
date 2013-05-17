@@ -62,7 +62,7 @@ class Schedule_model extends CI_Model {
     function delete($id) {
         try {
             $this->db->where('id', $id);
-            $this->db->delete();
+            $this->db->delete('schedule');
         } catch (Exception $e) {
             throw $e;
         }

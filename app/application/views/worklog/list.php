@@ -11,10 +11,10 @@
 
     foreach ($logs->result() as $log) {
         $this->table->add_row(
-                anchor(base_url('worklog/detail/' . $log->id), $log->id), $log->customer, $log->project, $log->username, $log->description, date("d-M h:i a", human_to_unix($log->start_time)), date("d-M h:i a", human_to_unix($log->end_time)), $log->total_time
+                anchor(base_url('worklog/detail/' . $log->id), $log->id), $log->customer, $log->project, $log->username, $log->description, date("d-M h:i a", human_to_unix($log->start_time)), date("d-M h:i a", human_to_unix($log->end_time)), $log->total_time,\
+                anchor(base_url('worklog/delete/' . $log->id), '<i class="icon-remove"></i>', array ('onclick'=>"return confirm('Are you sure you want to delete this work log?');"))
         );
     }
-
     echo $this->table->generate();
     ?>
 

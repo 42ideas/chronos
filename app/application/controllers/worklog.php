@@ -75,9 +75,7 @@ class Worklog extends CI_Controller {
         $data['page_title'] = "New Worklog";
         $data['active_link'] = "worklog-menu";
 
-        //$data['customer_list'] = $this->Customer_model->list_all(MAX_RECORDS_PER_PAGE, 0);
         $data['project_list'] = $this->Project_model->list_all(MAX_RECORDS_PER_PAGE, 0);
-        //$data['user_list'] = $this->User_model->list_all(MAX_RECORDS_PER_PAGE, 0);
 
         $this->load->view('inc/header', $data);
         $this->load->view('worklog/create', $data);
@@ -105,6 +103,12 @@ class Worklog extends CI_Controller {
         $this->Worklog_model->user_id = $this->session->userdata('user_id'); //$this->GetCurrentUser();
         
         $this->Worklog_model->create();
+        
+        $this->index();
+    }
+    
+    public function delete($id) {
+        $this->Worklog_model->delete($id);
         
         $this->index();
     }
